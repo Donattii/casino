@@ -30,4 +30,52 @@ Este proyecto en C++ implementa un casino virtual con cuatro juegos populares: r
    - Asegúrate de tener un compilador C++ compatible y las librerías estándar de C++ instaladas.
 
 
+
+# Resumen del Proyecto
+
+## Estructura del Proyecto
+
+### Clase `Jugador`
+
+- Atributos: `nombre` (string) y `saldo` (float).
+- Métodos: `getNombre()`, `getSaldo()`, `apostar(float cantidad)` y `actualizarSaldo(float cantidad)`.
+
+### Clase `Juego` (Clase base abstracta)
+
+- Atributos: `nombre` (string) y `apuestaMinima` (float).
+- Métodos: `virtual jugar()` (método abstracto).
+
+### Clase `Ruleta` (Derivada de `Juego`)
+
+- Atributos adicionales: `numeroGanador` (int).
+- Métodos: `apostar(float cantidad)` y `jugar()`.
+
+### Clase `Blackjack` (Derivada de `Juego`)
+
+- Atributos adicionales: `mazo` (vector de cartas).
+- Métodos: `apostar(float cantidad)` y `jugar()`.
+
+### Clase `MaquinaTragamonedas` (Derivada de `Juego`)
+
+- Métodos: `apostar(float cantidad)` y `jugar()`.
+
+### Clase `CarreraCaballos` (Derivada de `Juego`)
+
+- Atributos adicionales: `distanciaCarrera` (float).
+- Métodos: `apostar(float cantidad)` y `jugar()`.
+
+## Flujo de Ejecución
+
+1. El programa solicita al jugador su nombre y saldo inicial.
+2. El jugador elige entre los juegos disponibles.
+3. Se instancia el juego seleccionado.
+4. El jugador apuesta.
+5. El juego se ejecuta, gestionando las apuestas y mostrando los resultados.
+6. Se actualiza el saldo del jugador después de cada juego.
+7. El jugador puede optar por jugar nuevamente o salir del programa.
+
+- Se debe validar que las apuestas no excedan el saldo disponible del jugador.
+
+
+
 ###  ♣️ ♥️ ♠️ ♦️
