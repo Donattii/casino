@@ -39,7 +39,6 @@ Este proyecto en C++ implementa un casino virtual con cuatro juegos populares: r
 ### Clase `Juego` (Clase base abstracta)
 
 - Atributos: `nombre` (string) y `apuestaMinima` (float).
-- Métodos: `virtual jugar()` (método abstracto).
 
 ### Clase `Ruleta` (Derivada de `Juego`)
 
