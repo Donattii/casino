@@ -29,10 +29,6 @@ Este proyecto en C++ implementa un casino virtual con cuatro juegos populares: r
 4. **Requisitos del Proyecto**:
    - Asegúrate de tener un compilador C++ compatible y las librerías estándar de C++ instaladas.
 
-
-
-# Resumen del Proyecto
-
 ## Estructura del Proyecto
 
 ### Clase `Jugador`
