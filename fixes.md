@@ -1,4 +1,4 @@
 # FIXES 🔦
 
 - fixed description of the project
-- added UML
+- added UML picture
