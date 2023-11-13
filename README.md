@@ -59,6 +59,12 @@ Este proyecto en C++ implementa un casino virtual con cuatro juegos populares: r
 - Atributos adicionales: `distanciaCarrera` (float).
 - Métodos: `apostar(float cantidad)` y `jugar()`.
 
+### UML
+![image](https://github.com/Donattii/casino/assets/112676468/305105b5-cb8d-4628-8ad3-55da9997a61d)
+
+
+
+
 ## Flujo de Ejecución
 
 1. El programa solicita al jugador su nombre y saldo inicial.
@@ -70,7 +76,5 @@ Este proyecto en C++ implementa un casino virtual con cuatro juegos populares: r
 7. El jugador puede optar por jugar nuevamente o salir del programa.
 
 - Se debe validar que las apuestas no excedan el saldo disponible del jugador.
-
-
 
 ###  ♣️ ♥️ ♠️ ♦️
