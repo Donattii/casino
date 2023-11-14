@@ -60,7 +60,8 @@ Este proyecto en C++ implementa un casino virtual con cuatro juegos populares: r
 - Métodos: `apostar(float cantidad)` y `jugar()`.
 
 ### UML
-![image](https://github.com/Donattii/casino/assets/112676468/305105b5-cb8d-4628-8ad3-55da9997a61d)
+![image](https://github.com/Donattii/casino/assets/112676468/f71c1104-c3bf-4dec-bb72-0fb622b085e2)
+
 
 
 
