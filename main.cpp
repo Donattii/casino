@@ -9,6 +9,7 @@ int main() {
 
     int opcionJuego;
     do {
+        system("cls");
         std::cout << "Seleccione el juego:\n";
         std::cout << "1. Ruleta\n";
         std::cout << "2. Carrera de Caballos\n";
@@ -17,13 +18,14 @@ int main() {
         std::cin >> opcionJuego;
 
         switch (opcionJuego) {
-            system("cls");
             case 1: {
+                system("cls");
                 Ruleta ruleta("Ruleta Europea", 5.0, jugador);
                 ruleta.jugar();
                 break;
             }
             case 2: {
+                system("cls");
                 float distanciaCarrera;
                 std::cout << "Tu saldo actual es: $" << jugador.getSaldo() << std::endl;
                 std::cout << "Ingrese la distancia de la carrera de caballos: ";
@@ -34,6 +36,7 @@ int main() {
                 break;
             }
             case 3: {
+                system("cls");
                 Blackjack blackjack("Blackjack", 5.0, jugador);
                 blackjack.jugar();
                 break;
