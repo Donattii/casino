@@ -50,10 +50,6 @@ Este proyecto en C++ implementa un casino virtual con cuatro juegos populares: r
 - Atributos adicionales: `mazo` (vector de cartas).
 - Métodos: `apostar(float cantidad)` y `jugar()`.
 
-### Clase `MaquinaTragamonedas` (Derivada de `Juego`)
-
-- Métodos: `apostar(float cantidad)` y `jugar()`.
-
 ### Clase `CarreraCaballos` (Derivada de `Juego`)
 
 - Atributos adicionales: `distanciaCarrera` (float).
