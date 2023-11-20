@@ -1,4 +1,21 @@
 # 🪙 DONATI CASINO 🪙
+
+## Cómo Jugar 🏇
+### Requisitos Previos
+- Asegúrate de tener un compilador de C++ instalado en tu computadora.
+
+### Paso 1: Compilar el Programa
+1. Abre una ventana de terminal.
+2. Navega al directorio que contiene el código fuente del casino.
+```cd ruta/del/codigo```
+
+Ejecuta el siguiente comando para compilar el programa.
+```g++ -o casino Jugador.cpp Juego.cpp Ruleta.cpp CarreraCaballos.cpp Blackjack.cpp main.cpp```
+
+### Paso 2: Ejecutar el Casino
+Después de compilar con éxito, ejecuta el programa con el siguiente comando.
+```./casino```
+
 ## 🎰 CONTEXTO 🎰
 Bienvenido a Donati Casino, un proyecto destinado a crear conciencia sobre la adicción a las apuestas. A través de esta experiencia, queremos resaltar los riesgos asociados con el juego compulsivo. Aunque brindamos entretenimiento, es crucial recordar que, a largo plazo, la mayoría de los jugadores pierden dinero.
 
