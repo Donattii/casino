@@ -6,8 +6,8 @@
 // Clase para representar el juego de Dados, hereda de la clase Juego
 class Dados : public Juego {
 private:
-    int dadoJugador; // Valor del dado del jugador
-    int dadoDealer;  // Valor del dado del dealer
+    int dadoJugador;
+    int dadoDealer;
 
 public:
     Dados();
