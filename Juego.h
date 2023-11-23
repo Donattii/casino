@@ -6,12 +6,16 @@
 class Juego {
 protected:
     std::string nombre;
-    float apuestaMinima;
+    int apuesta;
 
 public:
-    Juego(std::string nombre, float apuestaMinima);
-    virtual void apostar(float cantidad) = 0;
-    virtual void jugar() = 0;
+    Juego(const std::string& nombre);
+
+    virtual bool jugar() = 0;
+
+    int getApuesta() const;
+    const std::string& getNombre() const;
+    void setApuesta(int nuevaApuesta);
 };
 
 #endif
