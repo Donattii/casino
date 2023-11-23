@@ -40,7 +40,8 @@ Este proyecto en C++ implementa un casino virtual con tres juegos populares: Dad
    - Después de cada juego, se actualizará automáticamente tu saldo.
 
 ### UML
-![image](https://github.com/Donattii/casino/assets/112676468/5a7fce28-6ddf-46eb-8b5f-96f6f0e34055)
+![image](https://github.com/Donattii/casino/assets/112676468/d3584204-a756-4710-ab24-58c2acecdd2e)
+
 
 
 
