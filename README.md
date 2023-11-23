@@ -1,4 +1,4 @@
-# 🪙 DONATI CASINO 🪙
+# 🎰🪙 DONATI CASINO 🪙🎰
 
 ## Cómo Jugar 🏇
 ### Requisitos Previos
@@ -10,23 +10,25 @@
 ```cd ruta/del/codigo```
 
 Ejecuta el siguiente comando para compilar el programa.
-```g++ -o casino Jugador.cpp Juego.cpp Ruleta.cpp CarreraCaballos.cpp Blackjack.cpp main.cpp```
+```g++ -o casino main.cpp Jugador.cpp Juego.cpp Dados.cpp PPT.cpp Adivinar.cpp```
 
 ### Paso 2: Ejecutar el Casino
 Después de compilar con éxito, ejecuta el programa con el siguiente comando.
 ```./casino```
 
-## 🎰 CONTEXTO 🎰
+## 💵 CONTEXTO 💵
 Bienvenido a Donati Casino, un proyecto destinado a crear conciencia sobre la adicción a las apuestas. A través de esta experiencia, queremos resaltar los riesgos asociados con el juego compulsivo. Aunque brindamos entretenimiento, es crucial recordar que, a largo plazo, la mayoría de los jugadores pierden dinero.
 
-## 🎰 PROYECTO 🎰
-Este proyecto en C++ implementa un casino virtual con cuatro juegos populares: ruleta, blackjack, y carrera de caballos. Diseñado para un solo jugador, ofrece una experiencia de juego envolvente y divertida.
+## 💰 PROYECTO 💰
+Este proyecto en C++ implementa un casino virtual con tres juegos populares: Dados, Piedra Papel o Tijera, y Adivina el Número. Diseñado para un solo jugador, ofrece una experiencia de juego envolvente y divertida.
 
 ## Características
-
-- **Ruleta**: Permite apostar a números y colores mientras la rueda gira.
-- **Blackjack**: Juega una mano de cartas contra el crupier.
-- **Carrera de Caballos**: Apuesta en una carrera y observa el resultado.
+### Dados 🎲
+- Juega a los dados y desafía a la suerte.
+### Piedra, Papel o Tijera 🪨📄✂️
+- Sumérgete en el clásico juego de Piedra, Papel o Tijera.
+### Adivinar un Número 🔢
+- Pon a prueba tu suerte para adivinar un número.
 
 ## Instrucciones
 
@@ -37,45 +39,20 @@ Este proyecto en C++ implementa un casino virtual con cuatro juegos populares: r
    - Sigue las instrucciones en pantalla para realizar tus apuestas y jugar.
    - Después de cada juego, se actualizará automáticamente tu saldo.
 
-## Estructura del Proyecto
-
-### Clase `Jugador`
-
-- Atributos: `nombre` (string) y `saldo` (float).
-- Métodos: `getNombre()`, `getSaldo()`, `apostar(float cantidad)` y `actualizarSaldo(float cantidad)`.
-
-### Clase `Juego` (Clase base abstracta)
-
-- Atributos: `nombre` (string) y `apuestaMinima` (float).
-
-### Clase `Ruleta` (Derivada de `Juego`)
-
-- Atributos adicionales: `numeroGanador` (int).
-- Métodos: `apostar(float cantidad)` y `jugar()`.
-
-### Clase `Blackjack` (Derivada de `Juego`)
-
-- Atributos adicionales: `mazo` (vector de cartas).
-- Métodos: `apostar(float cantidad)` y `jugar()`.
-
-### Clase `CarreraCaballos` (Derivada de `Juego`)
-
-- Atributos adicionales: `distanciaCarrera` (float).
-- Métodos: `apostar(float cantidad)` y `jugar()`.
-
 ### UML
-![image](https://github.com/Donattii/casino/assets/112676468/6bc5275a-0043-4bef-b3b8-505ed766c0f1)
+![image](https://github.com/Donattii/casino/assets/112676468/7bd2b98e-4ff5-4977-bd82-6f2c8bf5afd8)
+
 
 
 ## Flujo de Ejecución
 
-1. El jugador elige entre los juegos disponibles.
-2. Se instancia el juego seleccionado.
-3. El jugador apuesta.
-4. El juego se ejecuta, gestionando las apuestas y mostrando los resultados.
-5. Se actualiza el saldo del jugador después de cada juego.
-6. El jugador puede optar por jugar nuevamente o salir del programa.
-
+1. El programa solicita al jugador su nombre y saldo inicial.
+2. El jugador elige entre los juegos disponibles.
+3. Se instancia el juego seleccionado.
+4. El jugador apuesta.
+5. El juego se ejecuta, gestionando las apuestas y mostrando los resultados.
+6. Se actualiza el saldo del jugador después de cada juego.
+7. El jugador puede optar por jugar nuevamente o salir del programa.
 - Se debe validar que las apuestas no excedan el saldo disponible del jugador.
 
 ###  ♣️ ♥️ ♠️ ♦️
