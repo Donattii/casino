@@ -1,13 +1,20 @@
 #include "PPT.h"
 #include <iostream>
 
-PPT::PPT() : Juego("Piedra, Papel o Tijera") {}
+PPT::PPT() : Juego("Piedra, Papel o Tijera"), eleccionJugador(0), eleccionDealer(0) {}
+
+int PPT::getEleccionJugador() const {
+    return eleccionJugador;
+}
+
+int PPT::getEleccionDealer() const {
+    return eleccionDealer;
+}
 
 bool PPT::jugar() {
-    int eleccionJugador;
     std::cin >> eleccionJugador;
 
-    int eleccionDealer = rand() % 3 + 1;
+    eleccionDealer = rand() % 3 + 1;
 
     if ((eleccionJugador == 1 && eleccionDealer == 3) ||
         (eleccionJugador == 2 && eleccionDealer == 1) ||
