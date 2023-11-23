@@ -1,10 +1,17 @@
 #include "Adivinar.h"
 #include <iostream>
 
-Adivinar::Adivinar() : Juego("Adivinar"), numeroSecreto(rand() % 5 + 1) {}
+Adivinar::Adivinar() : Juego("Adivinar"), numeroSecreto(rand() % 5 + 1), intento(0) {}
+
+int Adivinar::getIntento() const {
+    return intento;
+}
+
+int Adivinar::getNumeroSecreto() const {
+    return numeroSecreto;
+}
 
 bool Adivinar::jugar() {
-    int intento;
     std::cin >> intento;
 
     if (intento >= 1 && intento <= 5) {
@@ -17,8 +24,4 @@ bool Adivinar::jugar() {
     } else {
         return false;
     }
-}
-
-int Adivinar::getNumeroSecreto() const {
-    return numeroSecreto;
 }
