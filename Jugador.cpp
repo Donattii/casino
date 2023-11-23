@@ -1,18 +1,40 @@
 #include "Jugador.h"
+#include "Juego.h"
+#include <iostream>
 
-Jugador::Jugador(std::string nombre, float saldo) : nombre(nombre), saldo(saldo) {}
+Jugador::Jugador(const std::string& nombre, int dinero) : nombre(nombre), dinero(dinero) {}
 
 std::string Jugador::getNombre() const {
     return nombre;
 }
 
-float Jugador::getSaldo() const {
-    return saldo;
+int Jugador::getDinero() const {
+    return dinero;
 }
 
-void Jugador::apostar(float cantidad) {
+void Jugador::setDinero(int nuevoDinero) {
+    dinero = nuevoDinero;
 }
 
-void Jugador::actualizarSaldo(float cantidad) {
-    saldo += cantidad;
+bool Jugador::apostar(int cantidad) {
+    if (cantidad > 0 && cantidad <= dinero) {
+        dinero -= cantidad;
+        return true;
+    } else {
+        mensajeError = "\nNo tienes suficiente dinero para apostar esa cantidad.";
+        return false;
+    }
+}
+
+std::string Jugador::getMensajeError() const {
+    return mensajeError;
+}
+
+bool Jugador::jugar(Juego& juego) {
+    if (apostar(10)) {
+        juego.jugar();
+        setDinero(getDinero() + juego.getApuesta());
+        return true;
+    }
+    return false;
 }
