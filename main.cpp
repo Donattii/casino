@@ -6,7 +6,7 @@
 #include <iostream>
 
 int main() {
-
+    // Crear jugador
     std::string nombreJugador;
     std::cout << "Ingrese el nombre del jugador: ";
     std::cin >> nombreJugador;
