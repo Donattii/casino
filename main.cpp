@@ -32,7 +32,7 @@ int main() {
                 int cantidadApostada = 10;
 
                 if (jugador.jugar(juegoDados)) {
-                    std::cout << "¡Ganaste! Tu nuevo saldo es: " << jugador.getDinero() << std::endl;
+                    std::cout << "Tu nuevo saldo es: " << jugador.getDinero() << std::endl;
                 } else {
                     std::cout << jugador.getMensajeError() << std::endl;
                     std::cout << "Tu saldo actual es: " << jugador.getDinero() << std::endl;
@@ -61,7 +61,7 @@ int main() {
                 int cantidadApostada = 10;
 
                 if (jugador.jugar(juegoAdivinar)) {
-                    std::cout << "¡Ganaste! El número secreto era " << juegoAdivinar.getNumeroSecreto() << ". Tu nuevo saldo es: " << jugador.getDinero() << std::endl;
+                    std::cout << "El número secreto era " << juegoAdivinar.getNumeroSecreto() << ". Tu nuevo saldo es: " << jugador.getDinero() << std::endl;
                 } else {
                     std::cout << jugador.getMensajeError() << std::endl;
                     std::cout << "Tu saldo actual es: " << jugador.getDinero() << std::endl;
