@@ -1,53 +1,81 @@
 #include "Jugador.h"
-#include "Ruleta.h"
-#include "CarreraCaballos.h"
-#include "Blackjack.h"
+#include "Dados.h"
+#include "PPT.h"
+#include "Adivinar.h"
+#include <ctime>
 #include <iostream>
 
 int main() {
-    Jugador jugador("Test", 1000.0);
 
-    int opcionJuego;
+    std::string nombreJugador;
+    std::cout << "Ingrese el nombre del jugador: ";
+    std::cin >> nombreJugador;
+
+    Jugador jugador(nombreJugador, 100);
+
+    std::cout << "¡Bienvenido al Casino, " << jugador.getNombre() << "! Tu saldo actual es: " << jugador.getDinero() << std::endl;
+
+    // Menú de juegos
+    int opcion;
     do {
-        system("cls");
-        std::cout << "Seleccione el juego:\n";
-        std::cout << "1. Ruleta\n";
-        std::cout << "2. Carrera de Caballos\n";
-        std::cout << "3. Blackjack\n";
+        std::cout << "\n=== DONATI CASINO ===\n";
+        std::cout << "1. Dados\n";
+        std::cout << "2. Piedra, Papel o Tijera\n";
+        std::cout << "3. Adivinar un número\n";
         std::cout << "0. Salir\n";
-        std::cin >> opcionJuego;
+        std::cout << "Seleccione un juego (0-3): ";
+        std::cin >> opcion;
 
-        switch (opcionJuego) {
+        switch (opcion) {
             case 1: {
-                system("cls");
-                Ruleta ruleta("Ruleta Europea", 5.0, jugador);
-                ruleta.jugar();
+                Dados juegoDados;
+                int cantidadApostada = 10;
+
+                if (jugador.jugar(juegoDados)) {
+                    std::cout << "¡Ganaste! Tu nuevo saldo es: " << jugador.getDinero() << std::endl;
+                } else {
+                    std::cout << jugador.getMensajeError() << std::endl;
+                    std::cout << "Tu saldo actual es: " << jugador.getDinero() << std::endl;
+                }
                 break;
             }
             case 2: {
-                system("cls");
-                float distanciaCarrera;
-                std::cout << "Tu saldo actual es: $" << jugador.getSaldo() << std::endl;
-                std::cout << "Ingrese la distancia de la carrera de caballos: ";
-                std::cin >> distanciaCarrera;
+                std::cout << "Elije: 1. Piedra, 2. Papel, 3. Tijera: ";
+                PPT juegoPPT;
+                int cantidadApostada = 10;  // o cualquier otra cantidad que desees
 
-                CarreraCaballos carreraCaballos("Carrera de Caballos", 5.0, distanciaCarrera, jugador);
-                carreraCaballos.jugar();
+                if (jugador.jugar(juegoPPT)) {
+                    int eleccionDealer = rand() % 3 + 1;
+                    std::cout << "Dealer elige: " << eleccionDealer << std::endl;
+
+                    std::cout << "Tu nuevo saldo es: " << jugador.getDinero() << std::endl;
+                } else {
+                    std::cout << jugador.getMensajeError() << std::endl;
+                    std::cout << "Tu saldo actual es: " << jugador.getDinero() << std::endl;
+                }
                 break;
             }
             case 3: {
-                system("cls");
-                Blackjack blackjack("Blackjack", 5.0, jugador);
-                blackjack.jugar();
+                std::cout << "Adivina el número del 1 al 5: ";
+                Adivinar juegoAdivinar;
+                int cantidadApostada = 10;
+
+                if (jugador.jugar(juegoAdivinar)) {
+                    std::cout << "¡Ganaste! El número secreto era " << juegoAdivinar.getNumeroSecreto() << ". Tu nuevo saldo es: " << jugador.getDinero() << std::endl;
+                } else {
+                    std::cout << jugador.getMensajeError() << std::endl;
+                    std::cout << "Tu saldo actual es: " << jugador.getDinero() << std::endl;
+                }
                 break;
             }
             case 0:
-                std::cout << "Saliendo del casino. ¡Hasta luego!\n";
+                std::cout << "¡Gracias por jugar en el Casino, " << jugador.getNombre() << "! Tu saldo final es: " << jugador.getDinero() << std::endl;
                 break;
             default:
-                std::cout << "Opción no válida. Inténtalo de nuevo.\n";
+                std::cout << "Opción no válida. Por favor, seleccione una opción válida." << std::endl;
         }
-    } while (opcionJuego != 0);
+
+    } while (opcion != 0);
 
     return 0;
 }
