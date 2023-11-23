@@ -6,14 +6,18 @@
 class Jugador {
 private:
     std::string nombre;
-    float saldo;
+    int dinero;
+    std::string mensajeError;
 
 public:
-    Jugador(std::string nombre, float saldo);
+    Jugador(const std::string& nombre, int dinero);
+    std::string getMensajeError() const;
     std::string getNombre() const;
-    float getSaldo() const;
-    void apostar(float cantidad);
-    void actualizarSaldo(float cantidad);
+    int getDinero() const;
+    void setDinero(int nuevoDinero);
+
+    bool apostar(int cantidad);
+    bool jugar(class Juego& juego);
 };
 
 #endif
