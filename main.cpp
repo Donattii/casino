@@ -32,6 +32,15 @@ int main() {
                 int cantidadApostada = 10;
 
                 if (jugador.jugar(juegoDados)) {
+                    std::cout << "El dado del jugador: " << juegoDados.getDadoJugador() << std::endl;
+                    std::cout << "El dado del dealer: " << juegoDados.getDadoDealer() << std::endl;
+
+                    if (juegoDados.getDadoJugador() > juegoDados.getDadoDealer()) {
+                        std::cout << "¡Felicidades! Ganaste en el juego de dados.\n";
+                    } else {
+                        std::cout << "Lo siento, perdiste en el juego de dados.\n";
+                    }
+                    
                     std::cout << "Tu nuevo saldo es: " << jugador.getDinero() << std::endl;
                 } else {
                     std::cout << jugador.getMensajeError() << std::endl;
@@ -42,11 +51,22 @@ int main() {
             case 2: {
                 std::cout << "Elije: 1. Piedra, 2. Papel, 3. Tijera: ";
                 PPT juegoPPT;
-                int cantidadApostada = 10;  // o cualquier otra cantidad que desees
+                int cantidadApostada = 10;
 
                 if (jugador.jugar(juegoPPT)) {
-                    int eleccionDealer = rand() % 3 + 1;
+                    int eleccionDealer = juegoPPT.getEleccionDealer();
+
                     std::cout << "Dealer elige: " << eleccionDealer << std::endl;
+
+                    if (juegoPPT.getEleccionJugador() == eleccionDealer) {
+                        std::cout << "¡Empate! No ganas ni pierdes dinero.\n";
+                    } else if ((juegoPPT.getEleccionJugador() == 1 && eleccionDealer == 3) ||
+                            (juegoPPT.getEleccionJugador() == 2 && eleccionDealer == 1) ||
+                            (juegoPPT.getEleccionJugador() == 3 && eleccionDealer == 2)) {
+                        std::cout << "¡Felicidades! Ganaste en Piedra, Papel o Tijera.\n";
+                    } else {
+                        std::cout << "Lo siento, perdiste en Piedra, Papel o Tijera.\n";
+                    }
 
                     std::cout << "Tu nuevo saldo es: " << jugador.getDinero() << std::endl;
                 } else {
@@ -61,7 +81,16 @@ int main() {
                 int cantidadApostada = 10;
 
                 if (jugador.jugar(juegoAdivinar)) {
-                    std::cout << "El número secreto era " << juegoAdivinar.getNumeroSecreto() << ". Tu nuevo saldo es: " << jugador.getDinero() << std::endl;
+                    int intentoJugador = juegoAdivinar.getIntento();
+                    int numeroSecreto = juegoAdivinar.getNumeroSecreto();
+
+                    if (intentoJugador == numeroSecreto) {
+                        std::cout << "¡Felicidades! Adivinaste el número secreto.\n";
+                    } else {
+                        std::cout << "Lo siento, no adivinaste el número secreto. Era: " << numeroSecreto << "\n";
+                    }
+
+                    std::cout << "Tu nuevo saldo es: " << jugador.getDinero() << std::endl;
                 } else {
                     std::cout << jugador.getMensajeError() << std::endl;
                     std::cout << "Tu saldo actual es: " << jugador.getDinero() << std::endl;
