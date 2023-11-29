@@ -1,13 +1,22 @@
-#include "Jugador.h"
-#include "Juego.h"
 #include <iostream>
+#include "Jugador.h"
+
+using namespace std;
 
 // Constructor de la clase Jugador
-Jugador::Jugador(const std::string& nombre, int dinero) : nombre(nombre), dinero(dinero) {}
+Jugador::Jugador(const string& nuevoNombre, int nuevoDinero) {
+    nombre = nuevoNombre;
+    dinero = nuevoDinero;
+}
 
 // Obtener el nombre del jugador
-std::string Jugador::getNombre() const {
+string Jugador::getNombre() const {
     return nombre;
+}
+
+// Setter para el nombre del jugador
+void Jugador::setNombre(const string& nuevoNombre) {
+    nombre = nuevoNombre;
 }
 
 // Obtener la cantidad de dinero del jugador
@@ -32,16 +41,24 @@ bool Jugador::apostar(int cantidad) {
 }
 
 // Obtener el mensaje de error
-std::string Jugador::getMensajeError() const {
+string Jugador::getMensajeError() const {
     return mensajeError;
 }
 
 // Jugar un juego específico y gestionar la apuesta
-bool Jugador::jugar(Juego& juego) {
+bool Jugador::jugar() {
     if (apostar(10)) {
-        juego.jugar();
-        setDinero(getDinero() + juego.getApuesta());
+        juego->jugar();
+        setDinero(getDinero() + juego->getApuesta());
         return true;
     }
     return false;
+}
+
+Juego* Jugador::getJuego() const {
+    return juego;
+}
+
+void Jugador::setJuego(Juego* nuevoJuego) {
+    juego = nuevoJuego;
 }
