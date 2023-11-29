@@ -10,7 +10,7 @@
 ```cd ruta/del/codigo```
 
 Ejecuta el siguiente comando para compilar el programa.
-```g++ -o casino main.cpp Jugador.cpp Juego.cpp Dados.cpp PPT.cpp Adivinar.cpp```
+```g++ -o casino casino.cpp Jugador.cpp Juego.cpp Dados.cpp PPT.cpp Adivinar.cpp```
 
 ### Paso 2: Ejecutar el Casino
 Después de compilar con éxito, ejecuta el programa con el siguiente comando.
@@ -26,13 +26,14 @@ Este proyecto en C++ implementa un casino virtual con tres juegos populares: Dad
 ### Dados 🎲
 - Juega a los dados y desafía a la suerte.
 ### Piedra, Papel o Tijera 🪨📄✂️
-- Sumérgete en el clásico juego de Piedra, Papel o Tijera.
+- Prueba el clásico juego de Piedra, Papel o Tijera.
 ### Adivinar un Número 🔢
 - Pon a prueba tu suerte para adivinar un número.
 
 ## Instrucciones
 
 1. **Configuración Inicial**:
+   - Ingresa tu nombre.
    - Selecciona uno de los tres juegos disponibles.
 
 2. **Jugando**:
@@ -40,7 +41,8 @@ Este proyecto en C++ implementa un casino virtual con tres juegos populares: Dad
    - Después de cada juego, se actualizará automáticamente tu saldo.
 
 ### UML
-![image](https://github.com/Donattii/casino/assets/112676468/200df420-926b-4601-8be2-b9c415803644)
+![image](https://github.com/Donattii/casino/assets/112676468/84336610-be56-40e2-a68b-e4a9d90e3911)
+
 
 ## Flujo de Ejecución
 
