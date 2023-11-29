@@ -2,35 +2,47 @@
 #define JUGADOR_H
 
 #include <string>
+#include <iostream>
+#include "Juego.h"
+
+using namespace std;
 
 // Clase para representar un jugador
 class Jugador {
 private:
-    std::string nombre;
+    string nombre;
     int dinero;
-    std::string mensajeError;
+    string mensajeError;
+    Juego* juego;
 
 public:
-    // Constructor de la clase Jugador
-    Jugador(const std::string& nombre, int dinero);
+    Jugador(const string& nuevoNombre, int nuevoDinero);
+    
+    // Obtener el nombre del jugador
+    string getNombre() const;
+
+    // Setter para el nombre del jugador
+    void setNombre(const string& nuevoNombre);
 
     // Obtener el mensaje de error
-    std::string getMensajeError() const;
-
-    // Obtener el nombre del jugador
-    std::string getNombre() const;
+    string getMensajeError() const;
 
     // Obtener la cantidad de dinero del jugador
     int getDinero() const;
-
-    // Establecer una nueva cantidad de dinero para el jugador
+   
+    // Setter para la cantidad de dinero del jugador
     void setDinero(int nuevoDinero);
-
+    
     // Apostar una cantidad específica de dinero en un juego
     bool apostar(int cantidad);
 
-    // Jugar un juego específico y gestionar la apuesta
-    bool jugar(class Juego& juego);
+    // Obtener el juego del jugador
+    Juego* getJuego() const;
+
+    // Setter para el juego del jugador
+    void setJuego(Juego* nuevoJuego);
+
+    bool jugar();
 };
 
 #endif
