@@ -12,11 +12,11 @@ private:
 public:
     Dados();
 
-    // Simular el lanzamiento de un dado de 6 caras
-    int tirarDado() const;
-
     // Función para realizar un intento en el juego
     bool jugar();
+
+    // Simular el lanzamiento de un dado de 6 caras
+    int tirarDado() const;
     
     // Obtener el valor del dado del jugador
     int getDadoJugador() const;
