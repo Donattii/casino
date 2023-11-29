@@ -1,6 +1,8 @@
 #include "PPT.h"
 #include <iostream>
 
+using namespace std;
+
 // Constructor de la clase PPT
 PPT::PPT() : Juego("Piedra, Papel o Tijera"), eleccionJugador(0), eleccionDealer(0) {}
 
@@ -16,7 +18,7 @@ int PPT::getEleccionDealer() const {
 
 // Iniciar el juego de Piedra, Papel o Tijera
 bool PPT::jugar() {
-    std::cin >> eleccionJugador;
+    cin >> eleccionJugador;
 
     eleccionDealer = rand() % 3 + 1;
 
