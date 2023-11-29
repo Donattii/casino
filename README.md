@@ -46,7 +46,7 @@ Este proyecto en C++ implementa un casino virtual con tres juegos populares: Dad
 
 ## Flujo de Ejecución
 
-1. El programa solicita al jugador su nombre y saldo inicial.
+1. El programa solicita al jugador su nombre.
 2. El jugador elige entre los juegos disponibles.
 3. Se instancia el juego seleccionado.
 4. El jugador apuesta.
