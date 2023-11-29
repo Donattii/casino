@@ -16,11 +16,11 @@ Ejecuta el siguiente comando para compilar el programa.
 Después de compilar con éxito, ejecuta el programa con el siguiente comando.
 ```./casino```
 
+## 💰 PROYECTO 💰
+En mi proyecto de C++, he desarrollado un simulador de casino diseñado para un solo jugador que engloba diversas clases, entre ellas Jugador, Juego, Dados, PPT (Piedra, Papel o Tijera) y Adivinar. Los jugadores pueden disfrutar de la experiencia de apostar dinero en diferentes juegos, cada uno con sus propias reglas y desafíos únicos. Ya sea lanzando dados, participando en una partida de Piedra, Papel o Tijera, o tratando de adivinar correctamente el número secreto. La interacción entre las clases crea una experiencia envolvente que simula de manera realista el ambiente de un casino, brindando a los jugadores la oportunidad de experimentar la emoción y la adrenalina de las apuestas.
+
 ## 💵 CONTEXTO 💵
 Bienvenido a Donati Casino, un proyecto destinado a crear conciencia sobre la adicción a las apuestas. A través de esta experiencia, queremos resaltar los riesgos asociados con el juego compulsivo. Aunque brindamos entretenimiento, es crucial recordar que, a largo plazo, la mayoría de los jugadores pierden dinero.
-
-## 💰 PROYECTO 💰
-Este proyecto en C++ implementa un casino virtual con tres juegos populares: Dados, Piedra Papel o Tijera, y Adivina el Número. Diseñado para un solo jugador, ofrece una experiencia de juego envolvente y divertida.
 
 ## Características
 ### Dados 🎲
